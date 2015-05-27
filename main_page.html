@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Wilson Lab</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+
+    
+    <style>
+    /* General stuff */
+    html, body {
+        height:100%
+    }
+    body {
+        font-family:/*'Josefin Sans',*/ sans-serif;
+    }
+    
+    /*Ensures that specified width and height are the actual width and height
+     i.e. padding and margin are included in width and height.*/
+    * {
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+ 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a:hover {
+        font-weight: bold;
+        background-color:black;
+    }
+    a:hover span, a:hover i{
+        color:white;
+    }
+    
+    h1 a:hover #lab-title {
+        color:black;
+        background-color:transparent;
+
+    }
+
+    /* Page */
+    #outer_container {
+        height:100%;
+        width:100%;
+        background-color:black;
+        min-width:300px;
+        overflow:hidden;
+        
+        /*make page snap to sides, top and bottom of browser window.*/
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    
+    /* Content */
+    #content {
+        position:absolute;
+        overflow-y:auto;
+        overflow-x:hidden;
+        
+        height:100%; /* make div overflow bottom */
+        /*width:77.5%; /* change separator width */
+        left:190px;
+        right:10px;
+        
+        background-color:#DBDBDB;
+    }
+
+    /* Menu */
+    #lab-title {
+        font-family: 'Play', sans-serif;
+        text-align:center;
+        padding-bottom:10%;
+        padding-top:10%;
+        
+    }
+
+    #menu-box {
+        position:fixed;
+        top:0em;
+        left:0em;
+
+        height:100%;
+        width:180px;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        background-color:#DBDBDB;
+        /*border: .07em dotted;*/
+    }
+    
+    #menu a:hover{
+        color:white;
+        background-color:black;
+    }
+    
+
+    #menu ul, #menu ul li, #menu ul li a {
+        margin: 0;
+        padding: 0;
+        list-style: none; /*remove bullet points from menu items*/
+        display: block;
+        position: relative;
+    }
+    
+    #menu ul {
+        text-align:center;
+        list-style-type: none;
+    }
+    
+    #menu ul li a{
+        padding-top:10%;
+        padding-bottom:10%;
+        padding-left:2%;
+        padding-right:2%;
+
+        color:black;
+        border-top: 1px #2d2d2d solid;
+    }
+    
+    /*Makes line at bottom of final element of menu items list (below People)*/
+    #menu li:last-child a {
+        border-bottom: 1px #2d2d2d solid;
+    }
+    
+    
+    .menu-icon{
+        padding:1%;
+        
+    }
+
+    #contact-block {
+        position:absolute;
+        /*bottom:5%;*/
+        text-align:center;
+        padding-top:10%;
+        padding-bottom:10%;
+    }
+    #contact-info-title span {
+        border:1px black;
+        display:block
+        /*
+        padding-bottom:10%;*/
+
+    }
+    #contact-info {
+        display: inline;
+    }
+    #contact-info li {
+        font-size:.7em;
+    }
+    #uni-logo {
+        width:80%;
+        height:auto;
+        padding:3%;
+        margin:0em;
+    }
+
+    
+    /*
+     .menu_buttons{
+     height: 3em;
+     border: 0.05em solid;
+     text-align:center;
+     font-size:1.3em;
+     
+     text-align:center;
+     }
+     
+     .vert_center {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     }
+     
+     .menu_buttons span {
+     display: inline-block;
+     vertical-align: middle;
+     line-height: normal;
+     border: .08em solid;
+     }
+     
+     /* center menu options
+     #menu ul {
+     font-size:1em;
+     text-align:center;
+     
+     }
+     
+     */
+
+    /* Misc */
+    
+    .menu_divider {
+        /*width:60%;*/
+        border-color:black;
+    }
+    
+    .gradient {
+        background: -webkit-linear-gradient(#DBDBDB, #F4F4F4); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#DBDBDB, #F4F4F4); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#DBDBDB, #F4F4F4); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#DBDBDB, #F4F4F4); /* Standard syntax */
+    }
+    </style>
+
+</head>
+<body>
+    <div id="outer_container">
+       
+        <div id="menu-box">
+        <div id="menu">
+            
+            <h1 id="lab-title"><a href="">Wilson <br> Lab</a></h1>
+            
+            <ul>
+                <li><a href="">
+                    <i class="fa fa-heartbeat menu-icon"></i>
+                    <span>Research<span>
+                </a></li>
+                
+                <li> <a href="">
+                    <i class="fa fa-list-alt menu-icon"></i>
+                    <span>Publications</span>
+                </a></li>
+                
+                <li> <a href="">
+                    <i class="fa fa-desktop menu-icon"></i>
+                    <span>Programming </span>
+                </a></li>
+                <li> <a href="">
+                    <i class="fa fa-group menu-icon"></i>
+                    <span>People </span>
+                </a></li>
+            </ul>
+             
+                
+            <!--<hr class="menu_divider"></hr>-->
+            
+            <div id = "contact-block">
+                <span id="contact-info-title">Contact Info</span>
+                <img src="Loma_linda_university_logo_cropped.png" alt="Loma Linda University Logo" id="uni-logo">
+                    
+                    <ul id="contact-info">
+                        <li>Division of Physiology</li>
+                        <li>School of Medicine</li>
+                        <li>Loma Linda University</li>
+                        <li>Loma Linda, CA 92350</li>
+                        <li>U.S.A</li>
+                        
+                        <li><b>Phone:</b> (909) 651-5895</li>
+                        <li><b>Fax:</b> (909) 558-4029</li>
+                        <li><b>E-mail:</b> cgwilson@llu.edu</li>
+                    </ul>
+            </div>
+        </div>
+        </div>
+        
+    <div id="content">
+        <!-- page info goes here. -->
+    </div>
+    
+    </div>
+    
+    
+<body>
