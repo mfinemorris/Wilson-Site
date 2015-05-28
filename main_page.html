@@ -3,7 +3,8 @@
 <head>
     
     <title>Wilson Lab</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:300" rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">-->
     <link href="http://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
@@ -15,7 +16,7 @@
         height:100%
     }
     body {
-        font-family:/*'Josefin Sans',*/ sans-serif;
+        font-family:'Raleway',/*'Josefin Sans',*/ sans-serif;
     }
     
     /*Ensures that specified width and height are the actual width and height
@@ -32,20 +33,7 @@
         color: black;
     }
     
-    a:hover {
-        font-weight: bold;
-        background-color:black;
-    }
-    a:hover span, a:hover i{
-        color:white;
-    }
-    
-    h1 a:hover #lab-title {
-        color:black;
-        background-color:transparent;
-
-    }
-
+   
     /* Page */
     #outer_container {
         height:100%;
@@ -62,8 +50,9 @@
         bottom:0;
     }
     
+    /*******************************************/
     /* Content */
-    #content {
+    #content-frame {
         position:absolute;
         overflow-y:auto;
         overflow-x:hidden;
@@ -73,19 +62,38 @@
         left:190px;
         right:10px;
         
-        background-color:#DBDBDB;
-    }
-
-    /* Menu */
-    #lab-title {
-        font-family: 'Play', sans-serif;
-        text-align:center;
-        padding-bottom:10%;
-        padding-top:10%;
+        padding:7%;
         
+        background-color:lightgray;
     }
-
-    #menu-box {
+    
+    .content {
+        position:relative;
+        /*margin:0% 10% 10%;*/
+        background-color: #DBDBDB;
+        padding:3%;
+        border-radius:3em;
+        line-height:1.6em;
+        border:.1em black solid;
+    }
+    .content p {
+        margin: 3%;
+    
+    }
+    
+    #content-frame h1 {
+        font-size: 3em;
+        margin:0em;
+        padding:0;
+        padding-left:1em;
+        /*margin:5% 5% 10%;*/
+    }
+    
+    
+    /*******************************************/
+    /* Menu */
+    
+    #menu-frame {
         position:fixed;
         top:0em;
         left:0em;
@@ -96,15 +104,17 @@
         overflow-x: hidden;
         overflow-y: auto;
 
-        background-color:#DBDBDB;
+        background-color:lightgray;
         /*border: .07em dotted;*/
     }
     
-    #menu a:hover{
-        color:white;
-        background-color:black;
+    #lab-title {
+        font-family: 'Raleway', sans-serif;
+        text-align:center;
+        padding-bottom:10%;
+        padding-top:10%;
+        
     }
-    
 
     #menu ul, #menu ul li, #menu ul li a {
         margin: 0;
@@ -112,6 +122,7 @@
         list-style: none; /*remove bullet points from menu items*/
         display: block;
         position: relative;
+        height:100%;
     }
     
     #menu ul {
@@ -129,14 +140,24 @@
         border-top: 1px #2d2d2d solid;
     }
     
+    
     /*Makes line at bottom of final element of menu items list (below People)*/
     #menu li:last-child a {
         border-bottom: 1px #2d2d2d solid;
     }
     
+    #menu li a:hover {
+        font-weight: bold;
+        background-color:dimgrey;
+    }
+    
+    #menu li a:hover span, a:hover i{
+        color:white;
+    }
+
     
     .menu-icon{
-        padding:1%;
+        margin:1%;
         
     }
 
@@ -220,11 +241,10 @@
 <body>
     <div id="outer_container">
        
-        <div id="menu-box">
-        <div id="menu">
-            
+        <div id="menu-frame">
             <h1 id="lab-title"><a href="">Wilson <br> Lab</a></h1>
-            
+
+        <div id="menu">
             <ul>
                 <li><a href="">
                     <i class="fa fa-heartbeat menu-icon"></i>
@@ -245,10 +265,8 @@
                     <span>People </span>
                 </a></li>
             </ul>
-             
-                
-            <!--<hr class="menu_divider"></hr>-->
-            
+        </div>
+
             <div id = "contact-block">
                 <span id="contact-info-title">Contact Info</span>
                 <img src="Loma_linda_university_logo_cropped.png" alt="Loma Linda University Logo" id="uni-logo">
@@ -266,13 +284,24 @@
                     </ul>
             </div>
         </div>
-        </div>
         
-    <div id="content">
+        <div id="content-frame">
+            <h1>About</h1>
+            <div class="content">
+            <p>
+            My laboratory is primarily interested in the generation and modulation of respiratory rhythm in the mammalian central nervous system. In the past decade, we have focused on apnea of prematurity and other breathing problems that premature infants suffer. The questions we seek to answer are: How does the brain generate the drive for breathing? How is breathing pattern modulated by reflexes and chemosensation? How can we improve breathing regularity in premature infants?
+            </p>
+            <p>
+            We use electrophysiology techniques (extracellular single-unit recording, whole cell patch-clamp, electrochemistry) and fluorescence imaging (calcium indicators, pH sensitive dyes, cell specific markers) to explore the dynamic relationship between cells that are phasically active during breathing. Our chief animal model is the developing rat but we also use mice to explore genetic variability in the respiratory neural substrate.
+            </p>
+            </div>
+
         <!-- page info goes here. -->
-    </div>
+        </div>
     
     </div>
     
     
 <body>
+
+*/
