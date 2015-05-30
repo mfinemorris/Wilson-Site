@@ -1,0 +1,228 @@
+/* General stuff */
+html, body {
+    height:100%
+}
+body {
+    font-family:'Raleway',/*'Josefin Sans',*/ sans-serif;
+}
+
+/*Ensures that specified width and height are the actual width and height
+ i.e. padding and margin are included in width and height.*/
+* {
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Page */
+#outer_container {
+    height:100%;
+    width:100%;
+    background-color:black;
+    min-width:300px;
+    overflow:hidden;
+    
+    /*make page snap to sides, top and bottom of browser window.*/
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+/*******************************************/
+/* Content */
+#content-frame {
+    position:absolute;
+    overflow-y:auto;
+    overflow-x:hidden;
+    
+    height:100%; /* make div overflow bottom */
+    /*width:77.5%; /* change separator width */
+    left:190px;
+    right:10px;
+    
+    padding:7%;
+    
+    background-color:lightgray;
+}
+#content-frame h1 {
+    font-size: 3em;
+    margin:0em;
+    padding:0;
+    padding-left:1%;
+    color:dimgray;
+    /*margin:5% 5% 10%;*/
+}
+
+.content,
+.long-box,
+.short-box {
+    position:relative;
+    margin:0% 0% 2%;
+    background-color: #DBDBDB;
+    padding:3%;
+    border-radius:3em;
+    line-height:1.6em;
+    /*border:.1em grey solid;*/
+    
+}
+.long-box{
+}
+.short-box{
+    width:49%;
+    height:10%;
+    display:inline-block;
+    
+}
+.content p{
+    margin: 3%;
+    /*text-indent:2em;*/
+}
+
+.portrait{
+    height:10px;
+    width:auto;
+    padding:3px;
+}
+
+
+.picture-placeholder {
+ 
+    /*color:white;
+    background-color:dimgray;*/
+}
+
+
+.content p .citation {
+    text-indent:0em;
+
+    line-height: 120%;
+    font-weight: normal;
+    /*padding-left: 5em;*/
+    padding-bottom: 2em;
+    text-indent: -3em ;
+
+}
+
+
+/*******************************************/
+/* Menu */
+
+#menu-frame {
+    position:fixed;
+    top:0em;
+    left:0em;
+    
+    height:100%;
+    width:180px;
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    background-color:lightgray;
+    /*border: .07em dotted;*/
+}
+
+#lab-title {
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    padding-bottom:10%;
+    padding-top:10%;
+    
+}
+
+#menu ul, #menu ul li, #menu ul li a {
+    margin: 0;
+    padding: 0;
+    list-style: none; /*remove bullet points from menu items*/
+    display: block;
+    position: relative;
+    height:100%;
+}
+
+#menu ul {
+    text-align:center;
+    list-style-type: none;
+}
+
+#menu ul li a{
+    padding-top:10%;
+    padding-bottom:10%;
+    padding-left:2%;
+    padding-right:2%;
+    
+    color:black;
+    border-top: 1px #2d2d2d solid;
+    background-color:#DBDBDB
+
+}
+
+
+/*Makes line at bottom of final element of menu items list (below People)*/
+#menu li:last-child a {
+    border-bottom: 1px #2d2d2d solid;
+}
+
+#menu li a:hover {
+    font-weight: bold;
+    background-color:dimgrey;
+}
+
+#menu li a:hover span, a:hover i{
+    color:white;
+}
+
+
+.menu-icon{
+    margin:1%;
+    
+}
+
+#contact-block {
+    position:absolute;
+    /*bottom:5%;*/
+    text-align:center;
+    padding-top:10%;
+    padding-bottom:10%;
+}
+#contact-info-title span {
+    border:1px black;
+    display:block
+    /*
+     padding-bottom:10%;*/
+    
+}
+#contact-info {
+    display: inline;
+}
+#contact-info li {
+    font-size:.7em;
+}
+#uni-logo {
+    width:80%;
+    height:auto;
+    padding:3%;
+    margin:0em;
+}
+
+/* Misc */
+
+.menu_divider {
+    /*width:60%;*/
+    border-color:black;
+}
+
+.gradient {
+    background: -webkit-linear-gradient(#DBDBDB, #F4F4F4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#DBDBDB, #F4F4F4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#DBDBDB, #F4F4F4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#DBDBDB, #F4F4F4); /* Standard syntax */
+}
