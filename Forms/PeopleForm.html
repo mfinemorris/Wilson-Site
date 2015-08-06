@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add or Modify Lab Member</title>
+        <style>
+            h1{
+                margin:0;
+                font-size:1.5em;
+            }
+        
+        fieldset {
+            width:48%;
+            /*float:left;*/
+            margin-top:1%;
+        }
+        
+        input[type="text"]{
+            width:70%;
+            padding:1%;
+        }
+
+        #person-blurb{
+            /*float:left;*/
+            
+        }
+        
+        .button{
+            width:25%;
+            height:100%;
+            padding:1%;
+            align:center;
+        }
+        
+        
+        p{
+            margin:0;
+            padding:1% 0;
+        }
+        
+            </style>
+    </head>
+    
+    
+    <body>
+        <h1 class="title">Lab Member</h1>
+        <p class="form-instructions" style="width:50%;">
+        This is the form for adding or updating the information about a lab 
+        member. If adding a new member, please fill ALL fields 
+        (The picture field can be left blank -- a substitute picture will be 
+        provided). If updating an entry, fill in both name fields and the field 
+        you want to update. <br><b>Warning!</b> This will OVERWRITE the 
+        previous value of the modified entry. 
+        Blank fields will not overwrite existing entries in the database, 
+        allowing you to use this form to make targeted modifications.</p>
+        <form>
+            
+                <fieldset>
+                    <legend>Name, Job, Status</legend>
+                    First name:<br>
+                    <input type="text" name="firstname"  maxlength=255></input>
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname"  maxlength=255></input>
+                    <br>
+                    Position:<br>
+                    <input type="text" name="position" 
+                    placeholder="Lab Tech, Postdoc, Undergrad, etc."  
+                    maxlength=255></input>
+                    <br>
+					Filepath:<br>
+					<input type="text" name="filepath" 
+					placeholder="complete url or filepath to image."  
+					maxlength=255></input>
+                    
+                    
+                    <br>
+                    <br>
+
+                    <!--
+                     If I do this should prob be a drop down 
+                     with options 'current' or 'past'.
+                     -->
+                    Status:
+                    <br>
+                     <input type="radio" name="status" 
+                     value="Current"  checked>Current</input>
+                     <input type="radio" name="status" value="Past">Past</input>
+                     
+                     <br>
+                     Box Length:
+                     <br>
+                     <input type="radio" name="boxlen" 
+                     value="Short" checked>Short</input>
+                     <input type="radio" name="boxlen" value="Long">Long</input>
+                     
+                    
+                    <br>
+
+                </fieldset>
+                
+                <div id="description">
+                    <fieldset>
+                        <legend>About</legend>
+                        <p>
+                        Provide a short paragraph about yourself. 
+                        Where did you go to school and what 
+                        degrees/certifications do you have? 
+                        What do you do for the lab? 
+                        Be sure to write in 3rd person and 
+                        vary your sentence structure. 
+                        Consult the lab website for examples.
+                        </p>
+                        <textarea name="description" rows="14" cols="50"></textarea>
+                    </fieldset>
+                </div>
+
+                
+                <fieldset>
+                    <input type="submit" value="Submit" class="button"></input>
+                    <input type="button" onclick="" 
+                    value="Delete" class="button"></input>
+                    <input type="button" onclick="" 
+                    value="Reset" class="button"></input>
+                </fieldset>
+
+        </form>
+    </body>
+</html>
+
+<!--
+If I every make a script to construct these forms based on the sql tables,
+I could store instructional text in a table.
+
+for instruction text, could make a table like this:
++-----------------------------------------------------------------------+
+| menu_name | form_item 			| instructional_text 				|
++-----------------------------------------------------------------------+
+| People	| p.form-instructions	| This is the form for adding...	|
+| People	| legend				| Name, Job, Status					|
+| People	| 
+|
+|
++
+
+-->
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add or Modify Poster</title>
+        <style>
+            h1{
+                margin:0;
+                font-size:1.5em;
+            }
+        
+        fieldset {
+            width:48%;
+            /*float:left;*/
+            margin-top:1%;
+        }
+        
+        input[type="text"]{
+            width:70%;
+            padding:1%;
+        }
+
+        #person-blurb{
+            /*float:left;*/
+            
+        }
+        
+        .button{
+            width:25%;
+            height:100%;
+            padding:1%;
+            align:center;
+        }
+        
+        
+        p{
+            margin:0;
+            padding:1% 0;
+        }
+        
+            </style>
+    </head>
+    
+    
+    <body>
+        <h1 class="title">Poster<!-- Entry Type (based on table name)-->
+        </h1>
+        <p class="form-instructions" style="width:50%;">
+        This is the form for adding or updating the information about a poster. 
+        If updating an entry, fill in both <!--id field--> and the field 
+        you want to update. <br><b>Warning!</b> If you do not wish to modify a 
+        field, leave it blank! Blank fields will not overwrite existing 
+        entries in the database, allowing you to use this form to make 
+        modifications to existing entries in the database.</p>
+        <form>
+            
+                <fieldset>
+                    <legend>Poster</legend>
+                    Title:<br>
+                    <input type="text" name="title"  maxlength=255></input>
+                    <br>
+                    Authors:<br>
+                    <input type="text" name="authors"  maxlength=255></input>
+                    <br>
+                    Filepath:<br>
+                    <input type="text" name="filepath" 
+                    placeholder="complete url or filepath to image."  
+                    maxlength=255></input>
+                    
+                    <br>
+
+                </fieldset>
+                
+                <div id="description">
+                    <fieldset>
+                        <legend>Description/Abstract/Summary</legend>
+                        <p>
+                        This section is optional.
+                        </p>
+                        <textarea name="description" rows="14" cols="50"></textarea>
+                    </fieldset>
+                </div>
+                
+                <fieldset>
+                    <input type="submit" value="Submit" class="button"></input>
+                    <input type="button" onclick="" 
+                    value="Delete" class="button"></input>
+                    <input type="button" onclick="" 
+                    value="Reset" class="button"></input>
+                </fieldset>
+
+        </form>
+    </body>
+</html>
