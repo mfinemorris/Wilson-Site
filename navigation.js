@@ -1,16 +1,3 @@
-/*
-document.getElementByTagName("head").innerHTML=
-"<meta charset='utf-8'/>"+
-"<title>Wilson Lab</title>"+
-""+
-"<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'></link>"+
-"<link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'></link>"+
-"<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' media='all' rel='stylesheet' type='text/css'>"+
-"<link rel='stylesheet' href='../wilson_site.css'></link>"+
-""+
-"<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js'></script>";
-*/
-
 document.getElementById("menu-frame").innerHTML=
 "<h1 id='lab-title'>"+
 "    <a href='../Home/main_page.html'>"+
@@ -42,8 +29,17 @@ document.getElementById("menu-frame").innerHTML=
 "        <li>"+
 "            <div class='menu-item'>"+
 "                <a href='../Publications/publications_page.html'>"+
-"                    <i class='fa fa-list-alt menu-icon'></i>"+
+"                    <i class='fa fa-book menu-icon'></i>"+
 "                    <span>Publications</span>"+
+"                </a>"+
+"            </div>"+
+"        </li>"+
+"        "+
+"        <li>"+
+"            <div class='menu-item'>"+
+"                <a href='../Posters/posters_page.html'>"+
+"                    <i class='fa fa-list-alt menu-icon'></i>"+
+"                    <span>Posters</span>"+
 "                </a>"+
 "            </div>"+
 "        </li>"+
@@ -85,4 +81,4 @@ document.getElementById("menu-frame").innerHTML=
 "        </li>"+
 "        "+
 "    </ul>"+
-"</div>   ";
+"</div>   "
